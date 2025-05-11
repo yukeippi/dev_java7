@@ -1,0 +1,17 @@
+{
+    "name": "Java 7 Development",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "runArgs": ["--platform=linux/amd64"],
+    "extensions": [
+        "vscjava.vscode-java-pack",
+        "ms-azuretools.vscode-docker"
+    ],
+    "settings": {
+        "java.home": "/opt/java/jdk7"
+    },
+    "forwardPorts": []
+    // "remoteUser": "vscode"
+}
