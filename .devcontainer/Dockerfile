@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p /opt/java && \
     curl -L https://download.java.net/openjdk/jdk7u75/ri/jdk_ri-7u75-b13-linux-x64-18_dec_2014.tar.gz | \
     tar -xz -C /opt/java && \
-    ln -s /opt/java/jdk7u75-b13 /opt/java/jdk7
+    ln -s /opt/java/java-se-7u75-ri /opt/java/jdk7
 
 # Maven 3.2.5のインストール（Java 7/8と互換性のあるバージョン）
 RUN mkdir -p /usr/share/maven \

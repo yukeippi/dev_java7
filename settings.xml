@@ -1,0 +1,11 @@
+<settings>
+  <localRepository>${user.home}/.m2/repository</localRepository>
+  <offline>true</offline>
+  <mirrors>
+    <mirror>
+      <id>jboss-public</id>
+      <mirrorOf>central</mirrorOf>
+      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+    </mirror>
+  </mirrors>
+</settings>

@@ -1,74 +1,95 @@
-# Java 7 開発環境
+# Java 7 サンプルプロジェクト
 
-このリポジトリはJava 7アプリケーション開発用の環境を提供します。VS Code DevContainerを使用して、Windows環境で一貫した開発環境を簡単にセットアップできます。
+このリポジトリはJava 7を使用したシンプルなサンプルプロジェクトです。Maven構成が含まれており、すぐに開発を始めることができます。
 
 ## 環境構成
 
-- Java 7 (OpenJDK)
-- Maven 3.2.5
-- Debian Bullseye ベースのコンテナ
+- Java 7 (OpenJDK 7)
+- Maven 3.x（Maven Wrapper経由でも実行可能）
 
-## 前提条件
+## プロジェクト概要
 
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/)
-- VS Codeの[Dev Containers拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-- WSL2が有効化されていること（Windows 10/11）
-
-## Windows環境での使用方法
-
-1. **Docker Desktopの設定**
-   - Docker Desktopが最新バージョンであることを確認してください
-   - WSL2統合が有効になっていることを確認してください
-
-2. **devcontainer.jsonの設定**
-   - `.devcontainer/devcontainer.json`ファイルでは、Linux/AMD64プラットフォームを指定しています
-   - この設定はWindows環境で適切に動作するために必要です
+このプロジェクトは、Java 7環境での基本的な開発構成を示すサンプルです。シンプルな「Hello World」アプリケーションが含まれています。
 
 ## 使用方法
 
-1. このリポジトリをクローンします
-2. VS Codeでフォルダを開きます
-3. VS Codeが「Reopen in Container」を提案するポップアップを表示したら、それをクリックします
-   - または、コマンドパレット（F1キー）を開き、「Dev Containers: Reopen in Container」を選択します
-4. コンテナのビルドと起動が完了するまで待ちます
+### Mavenでのビルドと実行
 
-## トラブルシューティング
+```bash
+# Mavenがインストールされている場合
+mvn clean package
+java -jar target/java7-docker-demo-1.0-SNAPSHOT.jar
 
-### Windows環境での問題
+# または、Maven Wrapperを使用する場合
+./mvnw clean package
+java -jar target/java7-docker-demo-1.0-SNAPSHOT.jar
+```
 
-- **エラー**: WSL2関連のエラーが発生する場合
-  - **解決策**: WSL2が正しくインストールされ、有効化されていることを確認してください
-  - [WSL2のインストールガイド](https://docs.microsoft.com/ja-jp/windows/wsl/install)を参照してください
-
-- **エラー**: Dockerコンテナの起動に失敗する
-  - **解決策**: Docker Desktopが実行中であることを確認し、必要に応じてDocker Desktopを再起動してください
-  - Windowsセキュリティ設定やファイアウォールが原因の場合もあります
-
-### 一般的な問題
-
-- **エラー**: コンテナのビルドに失敗する
-  - **解決策**: Docker Desktopのリソース設定（メモリ、CPU）を確認し、必要に応じて増やしてください
-
-- **エラー**: Javaコマンドが見つからない
-  - **解決策**: コンテナ内で`echo $JAVA_HOME`を実行して、Java環境が正しく設定されていることを確認してください
+実行すると、「Hello, Java 7 Docker World!」というメッセージが表示されます。
 
 ## プロジェクト構造
 
 ```
 .
-├── .devcontainer/       # DevContainer設定
-│   ├── devcontainer.json
-│   └── Dockerfile
 ├── src/                 # ソースコード
 │   └── main/
 │       └── java/
 │           └── com/
 │               └── example/
-│                   └── HelloWorld.java
-└── pom.xml             # Mavenプロジェクト設定
+│                   └── HelloWorld.java  # サンプルJavaアプリケーション
+├── mvnw               # Maven Wrapper実行スクリプト
+├── pom.xml            # Mavenプロジェクト設定
+└── settings.xml       # Maven追加設定（オフラインモード、JBossリポジトリミラー）
 ```
+
+## Maven設定の詳細
+
+### pom.xml
+
+- Java 7のコンパイル設定
+- JUnit 4.12のテスト依存関係
+- メインクラス: `com.example.HelloWorld`
+
+### settings.xml
+
+- ローカルリポジトリの設定
+- オフラインモードの有効化
+- JBossパブリックリポジトリをMavenセントラルのミラーとして設定
+
+### Maven Wrapper (mvnw)
+
+- Mavenがインストールされていない環境でもプロジェクトをビルド可能
+- Java 7向けにTLS 1.2サポートを追加する設定を含む
+
+## サンプルコード
+
+`HelloWorld.java`は単純な「Hello World」プログラムで、コンソールに「Hello, Java 7 Docker World!」というメッセージを出力します。
+
+```java
+package com.example;
+
+/**
+ * シンプルなHello Worldプログラム
+ */
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java 7 Docker World!");
+    }
+}
+```
+
+## トラブルシューティング
+
+### ビルド関連の問題
+
+- **エラー**: Mavenビルドに失敗する
+  - **解決策**: `settings.xml`の設定を確認し、必要に応じてオフラインモードを無効にしてください
+  - JBossリポジトリへの接続が可能か確認してください
+
+- **エラー**: Java関連のエラーが発生する
+  - **解決策**: `JAVA_HOME`環境変数が正しく設定されていることを確認してください
+  - Java 7がインストールされていることを確認してください
 
 ## ライセンス
 
-このプロジェクトはMITライセンスの下で公開されています。
+このプロジェクトはApache License 2.0の下で公開されています。

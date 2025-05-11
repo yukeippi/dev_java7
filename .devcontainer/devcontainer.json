@@ -12,6 +12,6 @@
     "settings": {
         "java.home": "/opt/java/jdk7"
     },
-    "forwardPorts": [],
-    "remoteUser": "vscode"
+    "forwardPorts": []
+    // "remoteUser": "vscode"
 }
