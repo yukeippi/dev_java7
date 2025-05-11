@@ -1,12 +1,32 @@
 FROM debian:bullseye
 
+# デフォルトシェルをbashに設定
+SHELL ["/bin/bash", "-c"]
+
 # 必要なパッケージのインストール
 RUN apt-get update && apt-get install -y \
     git \
     curl \
     wget \
     unzip \
+    bash \
+    readline-common \
+    libreadline-dev \
     && rm -rf /var/lib/apt/lists/*
+
+# シェルの設定
+RUN echo "set -o vi" > /etc/profile.d/bash_history.sh && \
+    echo "export HISTCONTROL=ignoreboth:erasedups" >> /etc/profile.d/bash_history.sh && \
+    echo "export HISTSIZE=10000" >> /etc/profile.d/bash_history.sh && \
+    echo "export HISTFILESIZE=10000" >> /etc/profile.d/bash_history.sh && \
+    echo "shopt -s histappend" >> /etc/profile.d/bash_history.sh && \
+    chmod +x /etc/profile.d/bash_history.sh
+
+# inputrcの設定
+RUN echo '"\e[A": history-search-backward' > /etc/inputrc && \
+    echo '"\e[B": history-search-forward' >> /etc/inputrc && \
+    echo 'set show-all-if-ambiguous on' >> /etc/inputrc && \
+    echo 'set completion-ignore-case on' >> /etc/inputrc
 
 # OpenJDK 7のインストール
 RUN mkdir -p /opt/java && \
@@ -25,9 +45,9 @@ ENV MAVEN_HOME=/usr/share/maven
 ENV JAVA_HOME=/opt/java/jdk7
 ENV PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
 
-# vscodeユーザーの作成
+# vscodeユーザーの作成（デフォルトシェルをbashに設定）
 RUN groupadd --gid 1000 vscode \
-    && useradd --uid 1000 --gid 1000 -m vscode \
+    && useradd --uid 1000 --gid 1000 -m vscode -s /bin/bash \
     && apt-get update \
     && apt-get install -y sudo \
     && echo vscode ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/vscode \
