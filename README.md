@@ -16,10 +16,10 @@
 
 ```bash
 # コンパイル
-javac -encoding UTF-8 -d . src/com/example/HelloWorld.java
+javac -encoding UTF-8 -d classes src/com/example/HelloWorld.java
 
 # 実行
-java com.example.HelloWorld
+java -cp classes com.example.HelloWorld
 ```
 
 実行すると、「Hello, Java 7 Docker World!」というメッセージが表示されます。
