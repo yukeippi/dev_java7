@@ -1,0 +1,154 @@
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.109
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Apr 22 2021 18:43:38 UTC
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.109.0
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            5.15.167.4-microsoft-standard-WSL2
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /opt/java/java-se-7u75-ri/jre
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.7.0_75-b13
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /workspaces/dev_java7/apache-tomcat-7.0.109
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /workspaces/dev_java7/apache-tomcat-7.0.109
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/workspaces/dev_java7/apache-tomcat-7.0.109/conf/logging.properties
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/workspaces/dev_java7/apache-tomcat-7.0.109
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/workspaces/dev_java7/apache-tomcat-7.0.109
+May 14, 2025 4:09:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/workspaces/dev_java7/apache-tomcat-7.0.109/temp
+May 14, 2025 4:09:02 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+May 14, 2025 4:09:03 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+May 14, 2025 4:09:03 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1989 ms
+May 14, 2025 4:09:03 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+May 14, 2025 4:09:03 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.109
+May 14, 2025 4:09:03 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/docs]
+May 14, 2025 4:09:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/docs] has finished in [1,788] ms
+May 14, 2025 4:09:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/examples]
+May 14, 2025 4:09:09 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/examples] has finished in [4,121] ms
+May 14, 2025 4:09:09 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/host-manager]
+May 14, 2025 4:09:09 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/host-manager] has finished in [544] ms
+May 14, 2025 4:09:09 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/manager]
+May 14, 2025 4:09:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/manager] has finished in [601] ms
+May 14, 2025 4:09:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/ROOT]
+May 14, 2025 4:09:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/ROOT] has finished in [386] ms
+May 14, 2025 4:09:10 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+May 14, 2025 4:09:10 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 7676 ms
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.109
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Apr 22 2021 18:43:38 UTC
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.109.0
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            5.15.167.4-microsoft-standard-WSL2
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /opt/java/java-se-7u75-ri/jre
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.7.0_75-b13
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /workspaces/dev_java7/apache-tomcat-7.0.109
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /workspaces/dev_java7/apache-tomcat-7.0.109
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/workspaces/dev_java7/apache-tomcat-7.0.109/conf/logging.properties
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/workspaces/dev_java7/apache-tomcat-7.0.109
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/workspaces/dev_java7/apache-tomcat-7.0.109
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/workspaces/dev_java7/apache-tomcat-7.0.109/temp
+May 14, 2025 4:13:03 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+May 14, 2025 4:13:03 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 521 ms
+May 14, 2025 4:13:03 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+May 14, 2025 4:13:03 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.109
+May 14, 2025 4:13:03 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/docs]
+May 14, 2025 4:13:04 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/docs] has finished in [494] ms
+May 14, 2025 4:13:04 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/examples]
+May 14, 2025 4:13:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/examples] has finished in [1,395] ms
+May 14, 2025 4:13:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/host-manager]
+May 14, 2025 4:13:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/host-manager] has finished in [196] ms
+May 14, 2025 4:13:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/manager]
+May 14, 2025 4:13:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/manager] has finished in [206] ms
+May 14, 2025 4:13:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/ROOT]
+May 14, 2025 4:13:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [/workspaces/dev_java7/apache-tomcat-7.0.109/webapps/ROOT] has finished in [161] ms
+May 14, 2025 4:13:06 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+May 14, 2025 4:13:06 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2518 ms
+May 14, 2025 4:15:39 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+May 14, 2025 4:15:39 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+May 14, 2025 4:15:39 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+May 14, 2025 4:15:39 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+May 14, 2025 4:15:39 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
